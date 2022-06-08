@@ -1,13 +1,23 @@
 // Complete the following procedure, the 'name' variable in all letters to uppercase, output: ' 'HELLO' '.
 var name = 'hello';
 // TODO write your code here...
-
+console.log(name.toUpperCase());
 
 // Complete the following procedure, capitalizing all the words in the variable sentence and printing: 'Good Afternoon, Mr Mike.'
 var sentence = 'good afternoon, mr mike.';
 //TODO write your code here...
-
+function toUpper(str) {
+	var arr = str.split(" ");
+	for(var i=0;i<arr.length;i++)
+	{
+		arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
+		str = arr.join(" ");	
+	}
+	return str;			
+}
+console.log(toUpper(sentence));
 
 // Complete the following procedure to extract the amount of money variable, output: 20.
 var money = '￥20';
 //TODO write your code here...
+console.log(money.replace(/[^0-9]/ig,""));
